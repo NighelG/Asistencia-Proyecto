@@ -1,0 +1,32 @@
+{
+  "estudiantes": [
+    {
+      "id": "438a",
+      "completeName": "Douglas Nighel Villagra García",
+      "userName": "Nighel",
+      "email": "correofalso@gmail.com",
+      "passwordRegister": "123holamundo"
+    },
+    {
+      "id": "1206",
+      "completeName": "Carlos el topo que gira",
+      "userName": "Carlos",
+      "email": "bandicoot@gmail.com",
+      "passwordRegister": "akuaku123"
+    },
+    {
+      "id": "9c01",
+      "completeName": "Camelia Nighel García",
+      "userName": "Camelia",
+      "email": "hambreada24@gmail.com",
+      "passwordRegister": "tengoHambre24"
+    },
+    {
+      "id": "b8b2",
+      "completeName": "Son Goku",
+      "userName": "Goku",
+      "email": "esferaDe4Estrellas@gmail.com",
+      "passwordRegister": "34565432"
+    }
+  ]
+}

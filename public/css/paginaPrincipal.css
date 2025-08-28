@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    place-items: center;
+    margin: 2%;
+}
+.cuadroInfo{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    text-align: center;
+    place-items: center;
+    margin: 2%;
+}
+.espacioDecoracion{
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    text-align: center;
+    place-items: center;
+    margin: 2%;
+}
+.labelDecoracion{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    text-align: center;
+    place-items: center;
+    margin: 2%;
+}
