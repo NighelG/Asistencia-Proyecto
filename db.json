@@ -5,7 +5,9 @@
       "completeName": "Douglas Nighel Villagra García",
       "userName": "Nighel",
       "email": "correofalso@gmail.com",
-      "passwordRegister": "123holamundo"
+      "passwordRegister": "123holamundo",
+      "rol": "Administrador",
+      "logged": true
     },
     {
       "id": "1206",
@@ -27,6 +29,13 @@
       "userName": "Goku",
       "email": "esferaDe4Estrellas@gmail.com",
       "passwordRegister": "34565432"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "357e",
+      "consulta": "Aun no se como terminar esto, dejen y medito",
+      "fecha": "2025-08-29"
     }
   ]
 }

@@ -1,11 +1,12 @@
 body{
     text-align: center;
     place-items: center;
-    margin: 2%;
+    background-color: #001f3f;
+    color: #d3d3d3;     
 }
 .cuadroInfo{
     display: grid;
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(4, 150px);
     text-align: center;
     place-items: center;
     margin: 2%;
@@ -19,7 +20,7 @@ body{
 }
 .labelDecoracion{
     display: grid;
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(3, 200px);
     text-align: center;
     place-items: center;
     margin: 2%;

@@ -15,6 +15,7 @@ btnRegistro.addEventListener("click", async function () {
         userName: nombreUsuario.value,
         email: correoRegistro.value,
         passwordRegister: passwordRegistro.value,
+        logged: false
     }
         //respuesta negativa
         if(!estudianteInfo.completeName||!estudianteInfo.userName||!estudianteInfo.email||!estudianteInfo.passwordRegister){

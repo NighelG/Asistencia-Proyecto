@@ -33,3 +33,22 @@ async function postEstudiantes(estudiantes) {
     }
 }
 export{postEstudiantes}
+
+//PATCH
+async function patchEstudiantes(id, data) {
+    try {
+        const response = await fetch('http://localhost:3001/estudiantes/'+id,{
+            method:'PATCH',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+            const estudianteActualizado = await response.json()
+            return estudianteActualizado
+    } catch (error) {
+        console.error("ERROR, no se pudo Actualizar la informacion de estudiante",error);
+        throw error
+    }
+}
+export{patchEstudiantes}

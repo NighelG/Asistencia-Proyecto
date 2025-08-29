@@ -1,14 +1,16 @@
 body{
     text-align: center;
     place-items: center;
+    background-color: #7197bd;
+    color: #d3d3d3;     
 }
 
 .button {
-    background-color: #ffffff00;
-    color: #000000;
+    background-color: #3f3653;
+    color: #ffffff;
     width: 8.5em;
     height: 2.9em;
-    border: #3654ff 0.2em solid;
+    border: #000000 0.2em solid;
     border-radius: 11px;
     text-align: center;
     transition: all 0.6s ease;
@@ -38,7 +40,7 @@ body{
 .input {
     max-width: 190px;
     height: 44px;
-    background-color: #05060f0a;
+    background-color: #ffffff;
     border-radius: .5rem;
     padding: 0 1rem;
     border: 2px solid transparent;

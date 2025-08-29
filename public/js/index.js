@@ -1,5 +1,5 @@
 
-import { getEstudiantes } from "../services/servicesUser.js";
+import { getEstudiantes, patchEstudiantes } from "../services/servicesUser.js";
 
 //Invocaciones-Login
 const inputUsuario=document.getElementById("user");
@@ -12,7 +12,7 @@ btnLogin.addEventListener("click", async function () {
     const usuarioLogin={
         user:inputUsuario.value,
         password:inputPassword.value
-    }
+    };
     const estudiantes=await getEstudiantes();
 
     const estudianteEncontrado =estudiantes.filter(student =>
@@ -29,6 +29,8 @@ btnLogin.addEventListener("click", async function () {
         return;
     }
     if(estudianteEncontrado.length>0){
+        const usuario = estudianteEncontrado[0];
+        await patchEstudiantes(usuario.id,{logged:true});
         window.location.href="../pages/paginaPrincipal.html";
     }
     else{
@@ -40,5 +42,3 @@ btnLogin.addEventListener("click", async function () {
     }
 });
 //Zona de login fin
-
-//https://youtu.be/2SUwOgmvzK4?list=RDCSD2J8yaMmM

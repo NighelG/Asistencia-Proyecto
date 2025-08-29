@@ -7,6 +7,7 @@
 </head>
 <link rel="stylesheet" href="../css/paginaPrincipal.css">
 <body>
+    <button id="btnCerrarSesion">Cerrar sesion</button>
     <div class="labelDecoracion">
         <div>
             <p>Consulta</p>
@@ -14,18 +15,27 @@
             <input id="inputConsulta" type="text">
         </div>
         <div>
-        <p>Fecha</p>
-        <label for="inputFecha"></label>
-        <input id="inputFecha" type="datetime-local">
+            <p>Fecha</p>
+            <label for="inputFecha"></label>
+            <input id="inputFecha" type="date">
+        </div>
+        <div>
+            <p>Consultar</p>
+            <button id="btnConsulta"><img src="../img/arrow-right(1).png" alt=""></button>
         </div>
     </div>
     <br><br>
     <div class="cuadroInfo">
-        <div><p>Posicion en la cola</p></div>
-        <div><p>Usuario</p></div>
-        <div><p>Fecha</p></div>
+            <p>Posicion en la cola</p>
+            <p>Consulta</p>
+            <p>Usuario</p>
+            <p>Fecha</p>
+            <div class="cuadroInfo" id="espacioInfo">
+
+            </div>
     </div>
     <div class="espacioDecoracion" id="espacioInfo"></div>
+    <div id="espacioError"></div>
 </body>
 <script type="module" src="../js/paginaPrincipal.js"></script>
 </html>
