@@ -31,6 +31,11 @@ btnLogin.addEventListener("click", async function () {
     if(estudianteEncontrado.length>0){
         const usuario = estudianteEncontrado[0];
         await patchEstudiantes(usuario.id,{logged:true});
+        localStorage.setItem("logueado",JSON.stringify({
+            identificacion: usuario.id,
+            userName:usuario.userName,
+            Administrador: usuario.admin
+        }))
         window.location.href="../pages/paginaPrincipal.html";
     }
     else{

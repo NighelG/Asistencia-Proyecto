@@ -1,27 +1,23 @@
-body{
-    text-align: center;
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
     place-items: center;
     background-color: #001f3f;
-    color: #d3d3d3;     
+    color: #d3d3d3;
+}
+.contenedor {
+    text-align: center;
 }
 .cuadroInfo{
     display: grid;
     grid-template-columns: repeat(4, 150px);
-    text-align: center;
-    place-items: center;
-    margin: 2%;
 }
 .espacioDecoracion{
     display: grid;
     grid-template-columns: repeat(3, 150px);
-    text-align: center;
-    place-items: center;
-    margin: 2%;
 }
 .labelDecoracion{
     display: grid;
     grid-template-columns: repeat(3, 200px);
-    text-align: center;
-    place-items: center;
-    margin: 2%;
 }

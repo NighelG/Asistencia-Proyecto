@@ -8,34 +8,41 @@
 <link rel="stylesheet" href="../css/paginaPrincipal.css">
 <body>
     <button id="btnCerrarSesion">Cerrar sesion</button>
-    <div class="labelDecoracion">
-        <div>
-            <p>Consulta</p>
-            <label for="inputConsulta"></label>
-            <input id="inputConsulta" type="text">
-        </div>
-        <div>
-            <p>Fecha</p>
-            <label for="inputFecha"></label>
-            <input id="inputFecha" type="date">
-        </div>
-        <div>
-            <p>Consultar</p>
-            <button id="btnConsulta"><img src="../img/arrow-right(1).png" alt=""></button>
-        </div>
-    </div>
-    <br><br>
-    <div class="cuadroInfo">
-            <p>Posicion en la cola</p>
-            <p>Consulta</p>
-            <p>Usuario</p>
-            <p>Fecha</p>
-            <div class="cuadroInfo" id="espacioInfo">
-
+    <div class="contenedor">
+        <div class="labelDecoracion">
+            <div>
+                <p>Consulta</p>
+                <label for="inputConsulta"></label>
+                <input id="inputConsulta" type="text">
             </div>
+            <div>
+                <p>Fecha</p>
+                <label for="inputFecha"></label>
+                <input id="inputFecha" type="date">
+            </div>
+            <div>
+                <p>Consultar</p>
+                <button id="btnConsulta"><img src="../img/arrow-right(1).png" alt=""></button>
+            </div>
+        </div>
+        <br><br>
+        <div class="cuadroInfo">
+                <p>Consulta</p>
+                <p>Fecha</p>
+                <p>Posicion en la cola</p>
+                <p>Usuario</p>
+                <div class="cuadroInfo" id="espacioInfo">
+
+                </div>
+        </div>
+        <div class="espacioDecoracion" id="espacioInfo">
+
+        </div>
+        <div id="espacioError">
+            
+        </div>
     </div>
-    <div class="espacioDecoracion" id="espacioInfo"></div>
-    <div id="espacioError"></div>
+    <button id="btnEstadisticas">Estadisticas</button>
 </body>
 <script type="module" src="../js/paginaPrincipal.js"></script>
 </html>

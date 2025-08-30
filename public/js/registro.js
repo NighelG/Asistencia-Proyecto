@@ -15,8 +15,12 @@ btnRegistro.addEventListener("click", async function () {
         userName: nombreUsuario.value,
         email: correoRegistro.value,
         passwordRegister: passwordRegistro.value,
+        admin: false,
         logged: false
-    }
+    };
+        if(nombreUsuario.value === "Nighel"||nombreUsuario.value === "Camelia"){
+            estudianteInfo.admin=true;
+        };
         //respuesta negativa
         if(!estudianteInfo.completeName||!estudianteInfo.userName||!estudianteInfo.email||!estudianteInfo.passwordRegister){
             registroEspacio.innerHTML=""

@@ -6,7 +6,7 @@
       "userName": "Nighel",
       "email": "correofalso@gmail.com",
       "passwordRegister": "123holamundo",
-      "rol": "Administrador",
+      "admin": true,
       "logged": true
     },
     {
@@ -14,28 +14,37 @@
       "completeName": "Carlos el topo que gira",
       "userName": "Carlos",
       "email": "bandicoot@gmail.com",
-      "passwordRegister": "akuaku123"
+      "passwordRegister": "akuaku123",
+      "admin": false,
+      "logged": false
     },
     {
       "id": "9c01",
       "completeName": "Camelia Nighel García",
       "userName": "Camelia",
       "email": "hambreada24@gmail.com",
-      "passwordRegister": "tengoHambre24"
+      "passwordRegister": "tengoHambre24",
+      "admin": true,
+      "logged": false
     },
     {
       "id": "b8b2",
       "completeName": "Son Goku",
       "userName": "Goku",
       "email": "esferaDe4Estrellas@gmail.com",
-      "passwordRegister": "34565432"
+      "passwordRegister": "34565432",
+      "admin": false,
+      "logged": false
+    },
+    {
+      "id": "84f3",
+      "completeName": "Profesor",
+      "userName": "Profe",
+      "email": "fwdprueba@gmail.com",
+      "passwordRegister": "765434567",
+      "admin": false,
+      "logged": false
     }
   ],
-  "consultas": [
-    {
-      "id": "357e",
-      "consulta": "Aun no se como terminar esto, dejen y medito",
-      "fecha": "2025-08-29"
-    }
-  ]
+  "consultas": []
 }

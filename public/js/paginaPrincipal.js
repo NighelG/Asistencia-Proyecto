@@ -5,6 +5,7 @@ const cerrarSesion=document.getElementById("btnCerrarSesion");
 const inputConsulta=document.getElementById("inputConsulta");
 const inputFecha=document.getElementById("inputFecha");
 const btnConsulta=document.getElementById("btnConsulta");
+const btnEstadisticas=document.getElementById("btnEstadisticas")
 const espacioInfo=document.getElementById("espacioInfo");
 const espacioError=document.getElementById("espacioError")
 
@@ -43,3 +44,15 @@ btnConsulta.addEventListener("click", async function () {
     const confirmarRespuesta = await postConsultas(consultaData);
     console.log(confirmarRespuesta);
 })
+//Zona de btn Estadistcas Inicio
+btnEstadisticas.addEventListener("click", async function () {
+    const usuarioLogueado=JSON.parse(localStorage.getItem("logueado"));
+
+    if(usuarioLogueado&&usuarioLogueado.Administrador===true){
+        window.location.href="../pages/xestadisticas.html";
+    }
+    else{
+        alert("No tienes los permisos necesarios")
+    }
+})
+//Zona de btn Estadistcas Fin
