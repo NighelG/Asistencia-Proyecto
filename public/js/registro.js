@@ -10,6 +10,7 @@ const registroEspacio=document.getElementById("registroEspacio")
 
 //Zona de registro inicio
 btnRegistro.addEventListener("click", async function () {
+    //Datos que subira al db.json
     const estudianteInfo={
         completeName: nombreCompleto.value,
         userName: nombreUsuario.value,
@@ -18,6 +19,7 @@ btnRegistro.addEventListener("click", async function () {
         admin: false,
         logged: false
     };
+    //Esto es para identicar quienes son admins, lo cambiare si tengo tiempo
         if(nombreUsuario.value === "Nighel"||nombreUsuario.value === "Camelia"){
             estudianteInfo.admin=true;
         };
@@ -36,6 +38,11 @@ btnRegistro.addEventListener("click", async function () {
             respuestaB.textContent="Registro completo";
             respuestaB.style.color="green";
             registroEspacio.appendChild(respuestaB);
+            //Esto limpia los inputs
+            nombreCompleto.value=""
+            nombreUsuario.value=""
+            correoRegistro.value=""
+            passwordRegistro.value=""
         }
     const confirmarRespuesta = await postEstudiantes(estudianteInfo);
     console.log(confirmarRespuesta);

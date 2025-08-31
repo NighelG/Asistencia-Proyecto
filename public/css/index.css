@@ -1,8 +1,14 @@
 body{
     text-align: center;
     place-items: center;
-    background-color: #7197bd;
-    color: #d3d3d3;     
+    background-color: #262626;
+    background-image: url(https://i.pinimg.com/originals/5b/25/b0/5b25b0143c81301e0247b9716477b88d.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff;
 }
 
 .button {
