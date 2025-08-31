@@ -24,7 +24,7 @@ function mostrarConsultas(consultaData){
         const datoConsulta=document.createElement("p");
         datoConsulta.textContent=consultaData.consulta;
         const datoFecha=document.createElement("p")
-        datoConsulta.textContent=consultaData.fecha;
+        datoFecha.textContent=consultaData.fecha;;
         espacioInfo.appendChild(datoPosicion);
         espacioInfo.appendChild(datoUsuario);
         espacioInfo.appendChild(datoConsulta);
@@ -72,6 +72,7 @@ btnConsulta.addEventListener("click", async function () {
             espacioError.appendChild(respuestaA);
             return;
     }
+    mostrarConsultas(consultaData);
     consultasGuardadas.push(consultaData);
     localStorage.setItem("consultas",JSON.stringify(consultasGuardadas));
     const confirmarRespuesta = await postConsultas(consultaData);

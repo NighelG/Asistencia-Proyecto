@@ -46,5 +46,13 @@
       "logged": false
     }
   ],
-  "consultas": []
+  "consultas": [
+    {
+      "id": "b21d",
+      "consulta": "Prueba",
+      "fecha": "2025-08-31",
+      "userName": "Nighel",
+      "numero": 1
+    }
+  ]
 }
