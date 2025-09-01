@@ -13,14 +13,6 @@ btnLogin.addEventListener("click", async function () {
         user:inputUsuario.value,
         password:inputPassword.value
     };
-    const estudiantes=await getEstudiantes();
-//Esto es para que solo deje pasar si es exactamente igual, y un and para asegurar de que se necesiten ambos datos correctos para acceder
-    const estudianteEncontrado =estudiantes.filter(student =>
-        student.userName === usuarioLogin.user &&
-        student.passwordRegister === usuarioLogin.password
-    );
-    //Esto lo uso para limpiar los inputs
-    loginEspacio.innerHTML="";
     //Por si un espacio queda en blanco
     if(!usuarioLogin.user||!usuarioLogin.password){
         loginEspacio.innerHTML="";
@@ -30,6 +22,14 @@ btnLogin.addEventListener("click", async function () {
         loginEspacio.appendChild(mensajeLoginA);
         return;
     }
+    const estudiantes=await getEstudiantes();
+    //Esto es para que solo deje pasar si es exactamente igual, y un and para asegurar de que se necesiten ambos datos correctos para acceder
+    const estudianteEncontrado =estudiantes.filter(student =>
+        student.userName === usuarioLogin.user &&
+        student.passwordRegister === usuarioLogin.password
+    );
+    //Esto lo uso para limpiar los inputs
+    loginEspacio.innerHTML="";
     //Este hace que el valor logged sea verdadero y manda el id,userName, y identifica si es admin o no
     if(estudianteEncontrado.length>0){
         const usuario = estudianteEncontrado[0];
@@ -39,7 +39,7 @@ btnLogin.addEventListener("click", async function () {
             userName:usuario.userName,
             Administrador: usuario.admin
         }));
-        //esto tambien limpia pero no me acuerdo como funcionaba junto al anterior
+        //esto tambien limpia
         inputUsuario.value="";
         inputPassword.value="";
         window.location.href="../pages/paginaPrincipal.html";

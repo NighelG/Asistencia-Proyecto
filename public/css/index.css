@@ -1,80 +1,153 @@
-body{
-    text-align: center;
-    place-items: center;
-    background-color: #262626;
-    background-image: url(https://i.pinimg.com/originals/5b/25/b0/5b25b0143c81301e0247b9716477b88d.gif);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+body {
     margin: 0;
-    color: #ffffff;
+    min-height: 100vh;
+    background-color: #1c1d1e;
+    color: #d3d3d3;
+    font-family: Arial, sans-serif;
+    display: grid;
+    place-items: center;
 }
 
-.button {
-    background-color: #3f3653;
-    color: #ffffff;
-    width: 8.5em;
-    height: 2.9em;
-    border: #000000 0.2em solid;
-    border-radius: 11px;
+header {
     text-align: center;
-    transition: all 0.6s ease;
+    margin-bottom: 20px;
 }
 
-.button:hover {
-    background-color: #3654ff;
-    cursor: pointer;
+.contenedor-login {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #2b2c2e;
+    width: 300px;
 }
 
-.button svg {
-    width: 1.6em;
-    margin: -0.2em 0.8em 1em;
-    position: absolute;
-    display: flex;
-    transition: all 0.6s ease;
-}
-
-    .button:hover svg {
-    transform: translateX(5px);
-}
-
-.text {
-    margin: 0 1.5em
-}
-
-.input {
-    max-width: 190px;
-    height: 44px;
-    background-color: #ffffff;
-    border-radius: .5rem;
-    padding: 0 1rem;
-    border: 2px solid transparent;
-    font-size: 1rem;
-    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
-}
-
-.label {
-    display: block;
-    margin-bottom: .3rem;
-    font-size: .9rem;
+.contenedor-login label {
     font-weight: bold;
-    color: #05060f99;
-    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+    margin-bottom: 5px;
 }
 
-.input:hover, .input:focus, .input-group:hover .input {
+.contenedor-login input {
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #1c1d1e;
+    color: #d3d3d3;
+}
+
+.contenedor-login input:focus {
     outline: none;
-    border-color: #05060f;
+    border-color: #0074D9;
 }
 
-.input-group:hover .label, .input:focus {
-    color: #05060fc2;
+.contenedor-login button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0074D9;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-h1{
-    font-family: 'Franklin Gothic Medium';
+.contenedor-login button:hover {
+    background-color: #005fa3;
 }
-h2{
-    font-family: 'Franklin Gothic Medium';
+
+#loginEspacio {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+button:hover {
+ color: #e8e8e8;
+}
+
+button:hover::before {
+ width: 100%;
+}
+
+input-container {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 45px;
+  padding-left: 2.5rem;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  background-color: #16171d;
+  outline: none;
+  color: #bdbecb;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+input::placeholder {
+  color: #bdbecb;
+}
+
+input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+input:active {
+  transform: scale(0.95);
+}
+
+input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+}
+
+input + svg,
+input + span {
+  position: absolute;
+  left: 1rem;
+  fill: #bdbecb; /* si es svg */
+  color: #bdbecb; /* si es span */
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  z-index: 1;
 }

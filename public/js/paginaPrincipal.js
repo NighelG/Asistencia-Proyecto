@@ -61,7 +61,9 @@ btnConsulta.addEventListener("click", async function () {
         consulta:inputConsulta.value,
         fecha:inputFecha.value,
         userName: userName,
-        numero: consultaPosicion
+        numero: consultaPosicion,
+        resuelto: false,
+        respuesta:""
     };
     //If por si uno o mas espacios estan vacios
     if(!consultaData.consulta||!consultaData.fecha){

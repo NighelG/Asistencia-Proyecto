@@ -10,7 +10,7 @@ async function getConsultas() {
             const consultas = await response.json()
             return consultas
     } catch (error) {
-        console.error("ERROR, algo salio mal al obtener la informacion del consultas",error);
+        console.error("ERROR, algo salio mal al obtener la informacion de la consultas",error);
         throw error
     }
 }
@@ -28,8 +28,27 @@ async function postConsultas(Consultas) {
             const consultasData = await response.json()
             return consultasData
     } catch (error) {
-        console.error("ERROR, no se pudo subir la informacion de consultas",error);
+        console.error("ERROR, no se pudo subir la informacion de la consultas",error);
         throw error
     }
 }
 export{postConsultas}
+
+//PATCH
+async function patchConsultas(id, data) {
+    try {
+        const response = await fetch('http://localhost:3001/consultas/'+id,{
+            method:'PATCH',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+            const consultaActualizado = await response.json()
+            return consultaActualizado
+    } catch (error) {
+        console.error("ERROR, no se pudo Actualizar la informacion de la consulta",error);
+        throw error
+    }
+}
+export{patchConsultas}
