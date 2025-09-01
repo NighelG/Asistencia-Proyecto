@@ -43,7 +43,7 @@ cerrarSesion.addEventListener("click", async function () {
         await patchEstudiantes(usuarioOnline.id,{logged: false});
     }
     localStorage.removeItem("logueado")
-    localStorage.removeItem("consultas")
+/*     localStorage.removeItem("consultas") */
     window.location.href="../pages/index.html";
 })
 //Zona de posteo de consultas Inicio
@@ -91,8 +91,12 @@ btnEstadisticas.addEventListener("click", async function () {
         window.location.href="../pages/xestadisticas.html";
     }
     else{
-        //esto es un Placeholder, si este mensaje sigue aqui es que se me olviodo cambiarlo xdxdxdxdxdx
-        alert("No tienes los permisos necesarios");
+        espacioError.innerHTML="";
+        const alertaPermisos=document.createElement("h2");
+        alertaPermisos.textContent="No tienes los permisos necesarios para acceder";
+        alertaPermisos.style.color="red";
+        espacioError.appendChild(alertaPermisos);
+        return;
     };
 });
 //Zona de btn Estadistcas Fin

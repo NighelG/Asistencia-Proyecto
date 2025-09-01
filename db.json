@@ -7,7 +7,7 @@
       "email": "correofalso@gmail.com",
       "passwordRegister": "123holamundo",
       "admin": true,
-      "logged": false
+      "logged": true
     },
     {
       "id": "1206",
@@ -25,7 +25,7 @@
       "email": "hambreada24@gmail.com",
       "passwordRegister": "tengoHambre24",
       "admin": true,
-      "logged": true
+      "logged": false
     },
     {
       "id": "b8b2",
@@ -48,40 +48,13 @@
   ],
   "consultas": [
     {
-      "id": "90b7",
-      "consulta": "Prueba #1",
+      "id": "ceee",
+      "consulta": "ASDFRT",
       "fecha": "2025-09-01",
       "userName": "Nighel",
       "numero": 1,
       "resuelto": true,
-      "respuesta": "Prueba"
-    },
-    {
-      "id": "8793",
-      "consulta": "Prueba #2",
-      "fecha": "2025-09-01",
-      "userName": "Nighel",
-      "numero": 2,
-      "resuelto": true,
-      "respuesta": "asdfghj"
-    },
-    {
-      "id": "8e69",
-      "consulta": "Prueba #3",
-      "fecha": "2025-09-01",
-      "userName": "Nighel",
-      "numero": 3,
-      "resuelto": true,
-      "respuesta": "asdfg"
-    },
-    {
-      "id": "2e83",
-      "consulta": "asdfghj",
-      "fecha": "2025-09-01",
-      "userName": "Camelia",
-      "numero": 1,
-      "resuelto": false,
-      "respuesta": ""
+      "respuesta": "ASDFGHJ"
     }
   ]
 }

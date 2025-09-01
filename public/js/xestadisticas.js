@@ -4,13 +4,11 @@ import { getConsultas,patchConsultas, postConsultas } from "../services/services
 const barraBusqueda = document.getElementById("barraBusqueda");
 const btnFiltro = document.getElementById("btnFiltro");
 const espacioConsultas = document.getElementById("espacioConsultas");
-
 let todasLasConsultas = [];
 //Listeners
 document.addEventListener("DOMContentLoaded", cargarConsultas);
 btnFiltro.addEventListener("click", filtrarPorUsuario);
 barraBusqueda.addEventListener("input", filtrarPorUsuario);
-
 //Zona de carga de consultas inicio
 async function cargarConsultas() {
     try {
@@ -19,24 +17,23 @@ async function cargarConsultas() {
     } catch (error) {
         console.error(error);
         espacioConsultas.innerHTML = "";
-        const mensajeError = document.createElement("p");
+        const mensajeError = document.createElement("p")
         mensajeError.textContent = "No se pudieron cargar las consultas.";
         mensajeError.style.color = "red";
         espacioConsultas.appendChild(mensajeError);
-    }
-}
+    };
+};
 //Zona de carga de consultas fin
 
 //Zona de renderizacion(no se si se escribe asi y que pereza corregirlo) de consultas inicio
 function renderLista(lista) {
     espacioConsultas.innerHTML = "";
-
     if (!lista || lista.length === 0) {
         const mensajeVacio = document.createElement("p");
         mensajeVacio.textContent = "Sin resultados.";
         espacioConsultas.appendChild(mensajeVacio);
         return;
-    }
+    };
     const nodos = lista.map((consulta) => {
         //Todo esto es para lo visual de la consulta
         const fila = document.createElement("div");
