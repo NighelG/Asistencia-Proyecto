@@ -7,7 +7,7 @@
       "email": "correofalso@gmail.com",
       "passwordRegister": "123holamundo",
       "admin": true,
-      "logged": true
+      "logged": false
     },
     {
       "id": "1206",
@@ -34,7 +34,7 @@
       "email": "esferaDe4Estrellas@gmail.com",
       "passwordRegister": "34565432",
       "admin": false,
-      "logged": false
+      "logged": true
     },
     {
       "id": "84f3",
@@ -48,13 +48,13 @@
   ],
   "consultas": [
     {
-      "id": "ceee",
-      "consulta": "ASDFRT",
-      "fecha": "2025-09-01",
+      "id": "8b11",
+      "consulta": "sdefrgtnhyjmuk,i",
+      "fecha": "2025-09-02",
       "userName": "Nighel",
       "numero": 1,
-      "resuelto": true,
-      "respuesta": "ASDFGHJ"
+      "resuelto": false,
+      "respuesta": ""
     }
   ]
 }

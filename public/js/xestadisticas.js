@@ -28,13 +28,14 @@ async function cargarConsultas() {
 //Zona de renderizacion(no se si se escribe asi y que pereza corregirlo) de consultas inicio
 function renderLista(lista) {
     espacioConsultas.innerHTML = "";
-    if (!lista || lista.length === 0) {
+    const pendientes=lista.filter((consulta)=>consulta.resuelto !== true);
+    if (!pendientes || pendientes.length === 0) {
         const mensajeVacio = document.createElement("p");
         mensajeVacio.textContent = "Sin resultados.";
         espacioConsultas.appendChild(mensajeVacio);
         return;
     };
-    const nodos = lista.map((consulta) => {
+    const nodos = pendientes.map((consulta) => {
         //Todo esto es para lo visual de la consulta
         const fila = document.createElement("div");
         fila.className = "fila-consulta";
@@ -97,12 +98,10 @@ function renderLista(lista) {
 //Zona de filtrado por usuario inicio
 function filtrarPorUsuario() {
     const textoBusqueda = barraBusqueda.value.toLowerCase();
-
     const filtradas = todasLasConsultas.filter((consulta) => {
         const user = (consulta.userName || "").toLowerCase();
         return user.includes(textoBusqueda);
     });
-
     renderLista(filtradas);
 }
 //Zona de filtrado por usuario fin
